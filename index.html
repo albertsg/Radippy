@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/style.css" rel = "stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:300,400" rel="stylesheet">
+	<script src = "jquery-3.1.1.min.js" type="text/javascript"></script>
+	
+	<!-- include jQuery file (you can use jQuery in your environment) --> 
+    <script src="lib/caph/3.1.0/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    
+    <!-- include CAPH 3.1.0 default package -->
+    <link href="lib/caph/3.1.0/caph.min.css" rel="stylesheet" type="text/stylesheet">
+
+    
+
+    <!-- include hammer js for touch feature (uncomment to enable touch feature) -->
+    <!-- <script src="lib/caph/3.1.0/hammerjs/hammer.min.js" type="text/javascript"></script>  -->
+
+    <!--  include the CAPH Package for jquery --> 
+    <script src="lib/caph/3.1.0/caph-jquery.min.js" type="text/javascript"></script>
+    
+    
+    
+    <script src = "js_frontend/jquery.bgswitcher.js"></script>
+    <script src = "main.js" type="text/javascript"></script>
+    <script src = "controller.js" type="text/javascript"></script>
+    
+	
+</head>
+<body >
+		<div class="grid" >
+			<div class="welcome-screen" id="page1">
+				<div class="logo"></div>
+				<div class="welcome-title"></div>
+				<div class="welcome-subtitle"></div>
+				<div class="welcome-btn-start" id = "first-focus" focusable data-focusable-depth="0" data-focusable-group="welcome-screen" data-focusable-name="wlcm-btn" ></div>
+			</div>
+			
+			
+			
+			<div id="page2">
+				
+				<div class="categories">
+					<!--  
+					<div class="selected-category">
+						<div class="selected-label">S.Category</div>
+					</div>
+					-->
+					
+					<!-- 
+					<div class="selected-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-0" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="selected-label" id="catrad0"></div>
+					</div>
+					-->
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-0" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad0">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-1" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad1">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-2" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad2">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-3" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad3">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-4" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad4">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-5" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad5">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-6" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad6">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-7" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad7">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-8" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad8">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-9" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad9">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-10" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad10">category</div>
+					</div>
+					<div class="previous-category" focusable data-focusable-depth="0" data-focusable-group="categories" data-focusable-name="fcategories-11" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-0">
+						<div class="previous-cat-label" id="catrad11">category</div>
+					</div>
+						
+				</div>	
+				<div class = "search">
+					<div class = "search-popular" focusable data-focusable-depth="0" data-focusable-group="search" data-focusable-name="fsearch-0" data-focusable-next-focus-down="group:radios">
+						<img class = "search-popular-img" src="images/icons/popular-search-icon2.png" alt="popular-search">
+					</div>
+					<div class = "search-abc" focusable data-focusable-depth="0" data-focusable-group="search" data-focusable-name="fsearch-1" data-focusable-next-focus-down="group:radios">
+						<img class= "search-abc-img" src="images/icons/abc-search-icon.png" alt="abc-search">
+					</div>
+					<div class= "search-extra" focusable data-focusable-depth="0" data-focusable-group="search" data-focusable-name="fsearch-2" data-focusable-next-focus-down="group:radios" data-focusable-next-focus-down="fradios-3">
+						<img class= "search-extra-img" src="images/icons/extra-search-icon.png" alt="extra-search">
+					</div>
+				</div>
+				<div class = "current-category">
+					<div class="current-category-label" id="scategory">S.Category</div>
+					<!-- <div class="current-category-label" id="selected-label-id">S.Category</div>-->
+				</div>
+				<div class="gridlist" id="rdg-page0">
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-0" data-focusable-next-focus-left="group:categories" data-focusable-next-focus-left="fcategories-1">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad0">Title</div>
+						</div>
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-1" data-focusable-next-focus-up="group:search" data-focusable-next-focus-up="fsearch-0">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad1">Title</div>
+						</div> 
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-2" data-focusable-next-focus-up="group:search" data-focusable-next-focus-up="fsearch-0">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad2">Title</div>
+						</div>
+						
+						<div class = "radio-final" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-3">
+							<div class = "radio-content-final"></div>
+							<div class = "radio-title-final" id="rad3">Title</div>
+						</div>
+						
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-4" data-focusable-next-focus-left="group:categories" data-focusable-next-focus-left="fcategories-1">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad4">Title</div>
+						</div>
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-5">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad5">Title</div>
+						</div>
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-6">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad6">Title</div>
+						</div>
+						<div class = "radio-final" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-7">
+							<div class = "radio-content-final"></div>
+							<div class = "radio-title-final" id="rad7">Title</div>
+						</div>
+						
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-8" data-focusable-next-focus-left="group:categories" data-focusable-next-focus-left="fcategories-1">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad8">Title</div>
+						</div>
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-9">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad9">Title</div>
+						</div>
+						<div class = "radio" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-10">
+							<div class = "radio-content"></div>
+							<div class = "radio-title" id="rad10">Title</div>
+						</div>
+						<div class = "radio-final" focusable data-focusable-depth="0" data-focusable-group="radios" data-focusable-name="fradios-11">
+							<div class = "radio-content-final"></div>
+							<div class = "radio-title-final" id="rad11">Title</div>
+						</div>
+						
+				</div>
+				
+				
+				
+
+				
+			</div>
+			
+		</div>
+		
+		<div class = "screen-overlay" id="screen-overlay-id">
+		
+		</div>
+					
+					
+		<div class="radio-controler" id="radio-controller-id" > 
+			<div class="radioctr-img-container">
+			<!-- 
+				<img class="radioctr-img" src = "images/radio-ctr/cover1-web2d.jpg" alt="current-radio-img">
+			 -->
+			</div>
+			<div class="radioctr-info-container">
+				<div class="curr-radio-playing">
+					<img class="indicator-img" src="images/radio-ctr/curr-playing2.png">
+				</div>
+				<div class="radioctr-label" id="namesong">BBC Radio 5 (UK Greatest Hits)</div>
+				<div class="radioctr-category" id="catsong">Pop/House</div>
+				<div class="radioctr-audio-container">
+					<audio id="audio">
+ 							<source id="streaming" src="" type="audio/mpeg">
+					</audio>
+					
+					<div class="left-container" focusable data-focusable-depth="0" data-focusable-group="radio-controller" data-focusable-name="fradioctr-prerad" data-focusable-next-focus-up="group:radios" data-focusable-next-focus-up="fradios-8" data-focusable-next-focus-left="group:radios" data-focusable-next-focus-left="fradios-8">
+						<img class="btn-previous" src = "images/radio-ctr/previous-radio.png">
+					</div>
+					<div class="radioctr-stop" focusable data-focusable-depth="0" data-focusable-group="radio-controller" data-focusable-name="fradioctr-playstop" data-focusable-next-focus-up="group:radios" data-focusable-next-focus-up="fradios-9">
+						<img class="btn-stop" src="images/radio-ctr/stop-button.png" id="stop">
+					</div>
+					<div class="right-container" focusable data-focusable-depth="0" data-focusable-group="radio-controller" data-focusable-name="fradioctr-nextrad" data-focusable-next-focus-up="group:radios" data-focusable-next-focus-up="fradios-10" data-focusable-next-focus-right="group:radios" data-focusable-next-focus-right="fradios-10">
+						<img class="btn-next" src = "images/radio-ctr/next-radio.png">
+					</div>
+					 
+					
+				</div>
+			</div>
+		</div>
+		
+			
+		<div class="radio-controller-lt" id = "radio-controller-lt-id">
+			<div class="curr-radio-playing">
+				<img class="indicator-img" src="images/radio-ctr/curr-playing2.png">
+			</div>
+			<div class="radioctr-label-lt" id="namesong2">BBC Radio 5 (UK Greatest Hits)</div>
+			<div class="radioctr-category-lt" id="catsong2">Pop/House</div>
+		</div>
+		
+			
+		
+		<!--   <img src = "images/background1.jpg" name ="slide" width="1920" height = "1080"> -->
+		
+		
+		<!--  
+		<div id = "debug">
+			<h1>
+			<p id = "debug-word">HOLA</p>
+			</h1>
+		</div>
+		-->
+		 
+		
+		<!--
+		<div id = "clickame">
+			<h1>CLICKAME</h1>
+		</div>
+		-->
+		
+	
+
+</body>
+</html>
